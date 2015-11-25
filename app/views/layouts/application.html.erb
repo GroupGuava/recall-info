@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Product Recalls</title>
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %><%= javascript_include_tag 'application', 'data-turbolinks-track' => true %><%= csrf_meta_tags %>
+<%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %><%= javascript_include_tag 'default', 'data-turbolinks-track' => true %><%= csrf_meta_tags %>
 <!-- Latest compiled and minified CSS -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 <!-- Latest compiled and minified JavaScript -->
@@ -19,6 +19,7 @@
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
 				<li class="active"><%= link_to "Home", root_path %></li>
+				<li><%= link_to "Categories", categories_index_path %></li>
 				<li><a href="#about">About</a></li>
 				<li><a href="#contact">Contact</a></li>
 				<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
