@@ -1,28 +1,35 @@
-<div class="row">
-  <div class="col-xs-1"></div>
-  <div class="col-xs-10">
-    <h1>Recall</h1>
-    <br>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+	<div class="container">
+		<h1>Product Recalls</h1>
+		<p>Welcome to the Product Recalls site. We track product recalls to bring you the latest information.</p>
+		<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+	</div>
+</div>
 
-    <div class="panel panel-default">
-      <div class="panel-body" style="height: 15%;">
-        <p>Welcome, please <%= link_to "create an account", new_user_path %>!</p>
-      </div>
-    </div>
-    <br>
-    <% @items.each do |i| %>
-      <div class="panel panel-default">
-        <div class="panel-title">
-          <h3 class="panel-header">
-            <%= i.title %>
-          </h3>
-        </div>
-        <div class="panel-body">
-          <p><%= i.description %></p>
-          <%= link_to "Find a return location", root_path %>
-        </div>
-      </div>
-      <br>
-    <% end %>
-  </div>
-  <div class="col-xs-1"></div>
+<!-- Main page container -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<p>Welcome, please <%= link_to "create an account", new_user_path %>!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<% @items.each do |i| %>
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-title">
+					<h3 class="panel-header"> <%= i.title %> </h3>
+				</div>
+				<div class="panel-body">
+					<p><%= i.description %></p>
+					<%= link_to "Find a return location", root_path %> </div>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>
