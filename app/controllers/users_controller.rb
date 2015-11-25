@@ -7,12 +7,14 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.save
-    respond_with @user, :location => root_path
+    if @user.save
+    	respond_with @user, :location => root_path
+		else
+			render 'new'
+		end
   end
 
   private
-
   def user_params
     params.require(:user).permit(:username, :email, :first, :last)
   end
