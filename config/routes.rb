@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root :to => "items#index"
 	
 	post 'users/new' => 'users#create'
+	
+	get '/about' => 'static#about'
 
   resources :users
   resources :items
