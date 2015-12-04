@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'categories/index'
+  get 'categories' => 'categories#index', :as => 'categories'
 
   root :to => "items#index"
 	
