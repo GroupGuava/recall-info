@@ -1,0 +1,25 @@
+
+<%@cat = "Toys"%>
+
+<div class="row">
+		<% @recallItems.each do |item| %>
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<%puts account_id%>
+				<% if item.tag == "Toys"%>
+				
+				
+					<div class="panel-title">
+						<h3 class="panel-header"> <%= item.title %> </h3>
+					</div>
+					<div class="panel-body">
+						<p><%= item.description %></p>
+						 </div>
+				<%end%>
+			
+			</div>
+		</div>
+		<% end %>
+	</div>
+
+</div>
