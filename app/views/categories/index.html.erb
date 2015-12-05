@@ -8,22 +8,71 @@
 </div>
 <br><br><br>
 <body>
-<div align="middle">
-<form>
+<div align="middle" class="panel-body">
 
-	<select name="Recall Categories">
+
 	
-	  <option value="">Foods and Drinks</option>
-	  <option value="">Household Goods</option>
-	  <option value="">Toys</option>
-	  <option value="">Vehicles</option>
+<!-- <form>
+
+	<select name="Recall Categories" id="sel">
+	
+	  <option value="1">Foods and Drinks</option>
+	  <option value="2">Household Goods</option>
+	  <option value="3">Toys</option>
+	  <option value="4">Vehicles</option>
 	 
-	</select>
+	</select> -->
 	
-	<input type="submit" value="Go">
+	
+
+	
+	<%@pushed = 0%>
+	
+	<p><%= link_to "Foods and Drinks",food_index_path(:account_id => 2)%></p>
+	<p><%= link_to "Household Goods", household_index_path(:account_id => 2)%></p>
+	<p><%= link_to "Toys", toys_index_path(:account_id => 2)%></p>
+	<p><%= link_to "Vehicles", vehicles_index_path(:account_id => 2)%></p>
+	<%= javascript_tag do %>
+	
+		function sender(){
+		
+			window.alert("works");
+		
+		}
+	
+	
+	<% end %>
+	
+	
+
+	
+	
 
 </form>
+<br><br>
+	<div class="row">
+		<% @recallItems.each do |item| %>
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				
+				<% if @dat == 1%>
+				
+				
+					<div class="panel-title">
+						<h3 class="panel-header"> <%= item.title %> </h3>
+					</div>
+					<div class="panel-body">
+						<p><%= item.description %></p>
+						 </div>
+				<%end%>
+			
+			</div>
+		</div>
+		<% end %>
+	</div>
+
 </div>
-<body>
+
+</body>
 
 </html>
