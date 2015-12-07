@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { sessions: 'users/sessions' }
-  get 'categories' => 'categories#index', :as => 'categories'
+
+  get '/items/:tag' => "items#tag", :as => 'tag_items'
 
   root :to => "items#index"
 	

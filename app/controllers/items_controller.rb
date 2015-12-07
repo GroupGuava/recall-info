@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    @tags = ["Toy", "Car", "Kitchen", "Food"]
   end
 
   def new
@@ -13,6 +14,11 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.save
     respond_with @item, :location => root_path
+  end
+
+  def tag
+    @items = Item.where(tag: params[:tag])
+    @tags = ["Toy", "Car", "Kitchen", "Food"]
   end
 
   private

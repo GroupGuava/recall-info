@@ -30,7 +30,7 @@
       <% end %>
     <% end %>
   </p>
-  <h1>All Items</h1>
+  <h1><%= params[:tag] %></h1>
   <br>
   <% if @items.count > 0 %>
     <% @items.each_with_index do |i, n| %>
@@ -62,7 +62,7 @@
       <div class="col-xs-12">
         <div class="panel panel-default">
           <div class="panel-body">
-            <p>There are no items</p>
+            <p>There are no items with the tag <%= params[:tag] %></p>
           </div>
         </div>
       </div>
