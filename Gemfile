@@ -33,6 +33,8 @@ gem 'arel', '6.0.0.beta2'
 gem 'responders', '~> 2.0'
 gem 'simple_form', '3.1.0.rc2'
 
+gem 'devise'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
